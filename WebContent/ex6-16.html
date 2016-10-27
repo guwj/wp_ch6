@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 함수 파라미터(= argument) --> 요상한 함수 사용법에 익숙해질 것
+	/* 	var f = function(arg1, arg2, arg3) {
+	 console.log(arg1);
+	 console.log(arg2.name);
+	 arg3();
+	 } */
+
+	var f = function() {
+		console.log(arguments[0]);
+		console.log(arguments[1].name);
+		arguments[2]();
+	}
+
+	f(10, {
+		name : "김용준",
+		email : "guwj@naver.com"
+	}, function() {
+		console.log("Hello JavaScript");
+	});
+
+	(function(a, b, c) {
+		console.log(a + b + c)
+	})(10, 20, 30); // 함수 정의 후 곧장 실행
+
+	// 함수 argument가 가변적일 때
+	var f = function() {
+
+		var lengthArgs = arguments.length;
+		for (var i = 0; i < lengthArgs; i++) {
+			console.log(arguments[i]);
+		}
+		console.log("-----------------------------");
+	}
+	
+	f(10);
+	f(20, "hello");
+	f(30, {
+		name:"김용준"
+	}, "hello", false);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

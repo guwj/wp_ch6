@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/wp-js1/rectangle.js"></script>
+<script>
+var rect1 = new Rectangle(10, 10, 20, 20, "#f00");
+var rect2 = new Rectangle(30, 30, 40, 50, "#555");
+var rect3 = new Rectangle(100, 80, 120, 200, "#0f0");
+var rect4 = new Rectangle(10, 400, 200, 200, "#00f");
+
+rect1.show = function(){
+	console.log("사각형을 그렸습니다");
+}
+
+rect1.show();
+
+rect2.borderColor = "#e41145";
+rect2.show();
+
+rect3.show();
+rect4.show();
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

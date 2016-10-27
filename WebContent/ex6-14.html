@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+console.log( new Date() );	// 현재 날짜
+
+// var d = new Date(2016, 9, 27);  //2016 년 10월 27일  -> 0부터 시작이므로 10월을 출력하려면 9라고 써야 한다
+
+var d = new Date(2016, 9, 27, 12, 30, 40);  //2016 년 10월 27일 12시 30분 40초
+console.log(
+		" 년도: " + (d.getYear() + 1900) + 
+		" 월: " + (d.getMonth() + 1) +
+		" 일은: " + d.getDate() + 
+		" 요일은: " + d.getDay() + 	// 0은 일요일
+		" 시는: " + d.getHours() + 
+		" 분은: " + d.getMinutes() + 
+		" 초는: " + d.getSeconds() + 
+		" 밀리초: " + d.getMilliseconds()
+		);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

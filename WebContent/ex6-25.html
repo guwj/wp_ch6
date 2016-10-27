@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	left: 100px;
+	top: 200px;
+	position: absolute;
+	background-color: #f00;
+	width: 90px;
+	height: 20px;
+	padding: 40px;
+	top: 200px;
+}
+</style>
+<script>
+	window.inload = function(event) {
+		var elDiv = document.getElementById("my-box");
+
+		elDiv.onmousedown = function() {
+			this.style.backgroundColor = "#00f";
+			this.innerHTML = "클릭하세요!";
+		}
+
+		elDiv.onmouseover = function() {
+
+			//박스를 움직인다
+			// 커서가 밖에 있도록 박스를 움직인다
+			var left = 0, top = 0;
+			
+			console.log(event.x + ":" + event.y);
+			var random = Math.floor(Math.random() * 10);	// 0 ~ 9
+			console.log(random);
+			
+			//this.style.left = left + "px";
+			//this.style.top = top + "px";
+		
+		}
+	}
+</script>
+</head>
+<body>
+	<div>클릭하세요!</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+<script>
+// null VS Undefined
+var myVar;
+var myVar2 = null;
+
+console.log(myVar + ":" + myVar2);
+console.log(myVar == myVar2);	// 값 비교
+console.log(myVar === myVar2);	// 타입까지 비교
+
+var myVar3 = "2";
+var myVar4 = 2;
+
+console.log(parseInt(myVar3, 10) == myVar4);	// String과 number 타입을 같다고 보기 때문에 이를 구분하기 위해 === 나온 것
+
+
+console.log("2" == 2);	
+console.log("2" === 2);	
+
+// variable scope
+ var i = 20;
+
+function f(){
+	var i = 10;
+	console.log( i );
+	i = i - 10;
+}
+
+f();
+
+console.log( i );
+
+
+// statement 구분 ; or \n -> 이 것도 되긴 하지만 원래처럼 ;로 구분할 것
+var str = "hello world"
+console.log( str )
+
+
+// 동적 타이핑 ( dynamical typing )	-> 가능하지만 원래 JAVA에서 했던 것 처럼 할 것, 마구자비로 타입 변형하면 디버깅 시 어려워 짐
+var a = 10;
+console.log(a);
+
+a = "Hello World";
+console.log(a);
+
+
+// 전역(global) 객체 Window
+console.log(window.a);
+
+var o = {};
+o.name = "김용준";
+o.age = new Number(26);
+o.age.man = 25;
+
+console.log(window.o.name);
+console.log(window.o.age + ":" + window.o.age.man);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

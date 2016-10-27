@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var onH1Clicked = function(el) {
+		el.innerHTML = "뭘 봐 마!! 드루와 봐 쉑 마!"
+		el.style.color = "#f00";
+	}
+
+	var onLoad = function() {	// body가 실행되고 나서 밑에 두 줄이 실행 됨
+		var on = false;
+		var elH1 = document.getElementById("my-h1");
+		setInterval(function(){
+			elH1.style.color = (on) ? "#f00" : "#000" ;
+			on = !on;	
+		}, 500);
+	}
+</script>
+</head>
+<body onload="onLoad();">
+	<!--
+<h1 onclick="this.innerHTML='Ooops!';">Click on this text!</h1>
+-->
+	<h1 onclick='console.log("드루와 이 쉑! 드루와");'
+		onmousedown='console.log("mousedown");'
+		onmouseup='console.log("mouseup");'
+		onmouseover='console.log("mouseover");'
+		onmouseout='console.log("mouseout");'>Click on this text!</h1>
+
+	<h1 onclick='onH1Clicked(this);'>Click on this text!</h1>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 타이머 설정1 - 한 번만 실행
+	setTimeout(function() {
+		//window.location.href = "http://localhost:8088/mysite3/main";
+	}, 1000);
+
+	// 타이머 설정2 - 여러번 실행 되게 할 때( interval )
+	var num = 0;
+	var intervalID = setInterval(function() {
+		console.log(++num);
+		if (num == 10) {
+			clearInterval(intervalID);
+		}
+	}, 1000);
+
+	var url = "http://mysite.com/?stuff=\"안 대혁!&bar=guwj@naver.com";
+
+	console.log(escape(url)); 		// deprecated 돼 있어 이제 삭제될 예정
+	console.log(encodeURI(url)); 	// 빈도 가장 높음
+	console.log(encodeURIComponent(url));
+
+	/* var escaped = escape("<h3>Here's a headline!</h3>");
+	 //alert( escaped );
+
+	 var url = "http://mysite.com/?stuff=\"안 대혁!&bar=";
+	 var encodedURL = encodeURI(url);
+
+	 alert(encodedURL); */
+</script>
+</head>
+<body>
+
+</body>
+</html>
